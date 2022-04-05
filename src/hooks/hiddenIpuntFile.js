@@ -83,6 +83,7 @@ export default function useHiddenInputFile() {
       clickableElements.forEach((el) => {
         el.classList.add('dropzone-clickable');
         el.addEventListener('click', triggerClickOnHiddenFileInput);
+        el.addEventListener('touchstart', triggerClickOnHiddenFileInput);
       });
     }
   };
@@ -90,6 +91,7 @@ export default function useHiddenInputFile() {
     // Remove all events
     clickableElements.forEach((el) => {
       el.removeEventListener('click', triggerClickOnHiddenFileInput);
+      el.removeEventListener('touchstart', triggerClickOnHiddenFileInput);
     });
     // Delete the hidden input file
     if (hiddenFileInput) {
