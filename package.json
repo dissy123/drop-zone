@@ -28,6 +28,7 @@
   "scripts": {
     "serve": "vue-cli-service serve --open src/components/DropZone.vue",
     "build": "rollup -c rollup.config.js",
+    "prepare": "rollup -c rollup.config.js",
     "test:unit": "vue-cli-service test:unit --runInBand",
     "test:e2e": "vue-cli-service test:e2e",
     "lint": "vue-cli-service lint",
